@@ -39,7 +39,9 @@ main:focus { outline: none; }
   max-width: var(--col);
   margin: 0 auto;
   padding: 18px 20px 6px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
 }
+.nav-link { font-size: 14px; font-weight: 700; color: var(--print); padding: 6px 2px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--graphite); }
 .brand-box {
   display: inline-grid; place-items: center;
@@ -239,6 +241,19 @@ h1, h2, h3 { line-height: 1.4; margin: 0; }
 .score .big { font-family: var(--font-num); font-weight: 700; font-size: 64px; line-height: 1; letter-spacing: -.02em; }
 .score .big small { font-size: 26px; color: var(--muted); letter-spacing: 0; }
 .score .pts { font-size: 16px; color: var(--muted); }
+.score .big small { margin-left: 2px; }
+.score .detail { font-size: 15px; color: var(--muted); line-height: 1.5; }
+.score .detail b { color: var(--graphite); font-size: 16px; }
+.delta { margin: 6px 0 0; font-size: 15px; }
+.sync {
+  margin: 14px 0 0; padding: 10px 12px;
+  font-size: 14px; color: var(--muted); line-height: 1.7;
+  border-left: 3px solid var(--print-line); background: #fff;
+}
+.linkbtn {
+  border: 0; background: none; padding: 0; cursor: pointer;
+  color: var(--print); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;
+}
 .pass { margin: 4px 0 0; font-weight: 700; }
 .pass.ok { color: var(--graphite); }
 .pass.ng { color: var(--redpen); }
@@ -270,6 +285,38 @@ h1, h2, h3 { line-height: 1.4; margin: 0; }
 
 .review-nav { display: flex; justify-content: space-between; gap: 10px; margin-top: 20px; }
 .review-nav .btn { flex: 1; }
+
+/* ---------- settings: 学習記録 ---------- */
+.panel {
+  margin: 0 0 18px; padding: 16px 18px 18px;
+  background: var(--sheet);
+  border: 1.5px solid var(--print-line); border-radius: var(--radius-s);
+}
+.panel h2 { font-size: 16px; margin: 0 0 10px; color: var(--graphite); }
+.panel p { margin: 0 0 8px; font-size: 15px; }
+.panel .actions { margin-top: 12px; }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; font-size: 15px; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; }
+.kv small { color: var(--muted); font-size: 13px; }
+.kv .ng { color: var(--redpen); font-weight: 700; }
+.field { display: grid; gap: 4px; margin: 0 0 12px; font-size: 14px; font-weight: 700; }
+.field input {
+  width: 100%; min-height: 46px; padding: 8px 12px;
+  font: inherit; font-weight: 400; font-size: 15px; color: var(--graphite);
+  border: 1.5px solid var(--print-line); border-radius: var(--radius-s); background: #fff;
+}
+.field input:focus { border-color: var(--print); outline: 3px solid var(--print-tint); outline-offset: 0; }
+.note { font-size: 13px !important; color: var(--muted); line-height: 1.7; }
+.form-msg { display: block; margin: 10px 0 0; font-size: 14px; line-height: 1.7; }
+.form-msg:empty { display: none; }
+.form-msg.ok { color: var(--graphite); font-weight: 700; }
+.form-msg.ng { color: var(--redpen); font-weight: 700; }
+.steps { margin: 0; padding-left: 1.4em; font-size: 15px; line-height: 1.8; }
+.steps li { margin: 0 0 10px; padding-left: 4px; }
+.steps li::marker { font-family: var(--font-num); font-weight: 700; color: var(--print); }
+.inline-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 8px; font-size: 14px; }
+.btn.small { min-height: 40px; font-size: 14px; padding: 0 14px; }
 
 /* ---------- zoom overlay ---------- */
 .zoom { position: fixed; inset: 0; z-index: 50; background: #fff; display: flex; flex-direction: column; }
