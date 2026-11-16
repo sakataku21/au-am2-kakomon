@@ -13,10 +13,10 @@
 
 - IPA 過去問題：https://www.ipa.go.jp/shiken/mondai-kaiotu/index.html
 
-解説は本アプリ独自に作成したもので、IPAの公式な解説ではありません。
+解説は、Web上の解説サイト（IPA Advanced：ipa.kinocode.jp、サクトレWeb：systemauditengineer.sakutore.decryption.co.jp）の各問の解説と、経済産業省「システム監査基準」などの原典を照合し、本アプリで要約・再構成したものです。解説文の転載はしていません。IPAの公式な解説ではありません。参考にした解説・資料は各問の解説の下にリンクで示しています。
 
 ## ファイル構成
 
 - `index.html` / `style.css` / `app.js`：アプリ本体（ビルド不要の静的サイト）
-- `data.js`：各問の正解・解説・参考リンク
+- `data.js`：各問の正解・解説・参考にした解説・資料のリンク
 - `img/<回>/qNN.png`：問題画像

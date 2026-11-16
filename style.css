@@ -226,7 +226,10 @@ h1, h2, h3 { line-height: 1.4; margin: 0; }
 }
 .explain .tag { display: inline-block; font-size: 12px; font-weight: 700; color: var(--redpen); background: var(--redpen-tint); padding: 2px 10px; border-radius: 999px; }
 .explain p { margin: 10px 0 0; font-size: 16px; line-height: 1.9; max-width: 40em; }
-.explain .links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; font-size: 14px; }
+.explain .refs { margin-top: 14px; padding-top: 10px; border-top: 1px dashed #E3D9DB; font-size: 14px; }
+.explain .refs h3 { font-size: 13px; color: var(--muted); font-weight: 700; margin: 0 0 4px; }
+.explain .refs ul { margin: 0 0 8px; padding-left: 1.2em; line-height: 1.8; }
+.explain .refs .search { font-size: 13px; }
 .source { font-size: 12px; color: var(--muted); margin: 12px 0 0; }
 
 .next-wrap { margin-top: 20px; }

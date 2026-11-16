@@ -220,8 +220,11 @@
         '<span class="sub">正解は <b>' + q.a + '</b>' + (ok ? '' : '（あなたの解答：' + chosen + '）') + '</span></div>';
       html += '<div class="explain"><span class="tag">' + esc(q.tag) + '</span>' +
         '<p>' + esc(q.exp) + '</p>' +
-        '<div class="links"><a href="' + q.ref + '" target="_blank" rel="noopener">解説サイトで詳しく読む</a>' +
-        '<a href="' + q.search + '" target="_blank" rel="noopener">Webで解説を検索</a></div></div>';
+        '<div class="refs"><h3>参考にした解説・資料</h3><ul>' +
+        (q.src || []).map(function (s) {
+          return '<li><a href="' + esc(s.u) + '" target="_blank" rel="noopener">' + esc(s.t) + '</a></li>';
+        }).join('') +
+        '</ul><a class="search" href="' + q.search + '" target="_blank" rel="noopener">ほかの解説をWebで検索</a></div></div>';
       html += '<p class="source">出典：' + esc(exam.source) + ' 問' + q.n + '</p>';
       if (!review) {
         var s = mem.session;
